@@ -1,0 +1,199 @@
+<html><head>
+<title>Braid applet, info page</title>   
+<script language="javascript"> </script> 
+</head>
+
+<body style="background-color: rgb(220, 220, 220);"> 
+<center><h1>A braid applet, explanations</h1></center>
+
+<hr>
+<font color="blue"><b><li>What is a braid diagram?</b></font>
+
+<p>
+
+A braid diagram is a picture consisting of strands that cross, on the shape of 
+
+<p>
+
+<center><img align="center" src="Images/braid1.png" height="250" width="220"></center>
+
+<br>
+
+Precisely, a diagram as above is called an <font color="red"><i><b>n</b></i> strand braid diagram</font> if it involves <i><b>n</b></i> strands and the following rules are obeyed: the strands keep a general orientation from top to bottom (no U-turn allowed) and, at each crossing, one strand is interrupted. For instance, the above diagram is a 4 strand braid diagram. An <i><b>n</b></i> strand braid diagram can be viewed as the plane projection of a 3-dimensional figure consisting of <i><b>n</b></i> continuous arcs, and the interruption in the projection means that, locally, there is a front strand crossing over a back strand. 
+
+
+<hr>
+
+<font color="blue"><b><li>How to describe a braid diagram?</b></font>
+
+<p>
+
+In order to describe a braid diagrams, we can encode if using a <font color="red">braid word</font>, i.e., a finite sequence of letters 'a', 'A', ..., 'z', 'Z'. When considered from top to bottom, a braid diagram consists of a finite succession of crossings. In order to describe it, it is sufficient to specify the successive crossings, hence to say which strands cross, and  with which orientation. Traditionally, one numbers the positions from <b>1</b> to <i><b>n</b></i> in an <i><b>n</b></i> strand braid diagram, and one calls <b>a</b> (or &#963<sub>1</sub>) the crossing where the strand at position 2 crosses over the strand at position 1, then <b>b</b> (or &#963<sub>2</sub>) the crossing where the strand at position 3 crosses over the strand at position 2, etc. Symmetrically, we shall use <b>A</b> (or &#963<sub>1</sub><sup>-1</sup>) for the crossing where the strand at position 1 crosses over the strand at position 2, then <b>B</b> (or &#963<sub>2</sub><sup>-1</sup>) the crossing where the strand at position 2 crosses over the strand at position 3, etc. 
+
+
+<center><b>a</b>&nbsp&nbsp&nbsp&nbsp&rarr;&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/a.png" height="50" width="95">&nbsp&nbsp&nbsp&nbsp,&nbsp&nbsp<b>A</b>&nbsp&nbsp&nbsp&nbsp&rarr;&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/ai.png" height="50" width="95"></center>
+<br><br>
+<center><b>b</b>&nbsp&nbsp&nbsp&nbsp&rarr;&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/b.png" height="50" width="95">&nbsp&nbsp&nbsp&nbsp,&nbsp&nbsp<b>B</b>&nbsp&nbsp&nbsp&nbsp&rarr;&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/bi.png" height="50" width="95"></center>
+
+<br>
+
+For instance, the first braid diagram above is encoded in the word <b>BcbACb</b> as can be checked <a href="Diagram/diagram.html">here</a>.
+
+<hr>
+
+<font color="blue"><b><li>What is the Braid Isotopy Problem?</b></font>
+
+<p>
+
+Two <i><b>n</b></i> braid diagrams are said to be <font color="red">isotopic</font> if they are projections of two 3-dimensional figures that can be continuously deformed one into the other, i.e., one can go from the former to the latter by moving the strands, but keeping the ends fixed and not allowing one strand to pass through another one. For instance, the diagrams below are isotopic, as the animation shows.
+
+<p>
+
+<center><img align="center" src="Images/Aai.png" height="95" width="50">&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/Aa.gif" height="95" width="50">&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/Aaf.png" height="95" width="50"></center>
+<br><br>
+<center><img align="center" src="Images/abai.png" height="140" width="95">&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/aba.gif" height="140" width="95">&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp<img align="center" src="Images/abaf.png" height="140" width="95"></center>
+<br>
+
+The <font color="red">Braid Isotopy Problem</font> is the algorithmic problem: 
+
+<menu>
+
+<li> Given two braid diagrams, decide whether they are isotopic.
+
+</menu>
+
+One says that two braid words are <font color="red">equivalent</font> if they encode isotopic diagrams. Thus, the Braid Isotopy Problem can be rephrased as: 
+
+<menu>
+
+<li>Given two braid words, decide whether they are equivalent or not.
+
+</menu>
+
+<hr>
+
+<font color="blue"><b><li>Is the Braid Isotopy Problem a difficult problem?</b></font>
+
+<p>
+
+The Braid Isotopy Problem is neither very easy, nor very difficult. It has been solved for the first time by the mathematician Emil Artin in the 1930's. Today, many different solutions are known, actually more than a dozen. They relie on various approaches, but all require relatively sophisticated results about braids. Below, we describe one such solution called handle reduction. 
+
+<hr>
+
+<font color="blue"><b><li>What is the Braid Triviality Problem?</b></font>
+
+<p>
+
+One says that a braid diagram is <font color="red">trivial</font> if it is isotopic to a diagram with no crossing at all. The <font color="red">Braid Triviality Problem</font> is the algorithmic problem: 
+
+<menu>
+
+<li>Given a braid diagram, decide whether it is trivial. 
+
+</menu>
+
+The diagram with no crossing is encoded in the empty word (the word with no letter!), so the Braid Triviality Problem can be rephrased as: 
+
+<menu>
+
+<li>Given a braid word, decide whether it is equivalent to empty word or not.
+
+</menu>
+
+<hr>
+
+<font color="blue"><b><li>Are the Braid Isotopy Problem and the Braid Triviality Problem connected?</b></font>
+
+<p>
+
+Yes, they are indeed equivalent problems. Firstly, the Braid Triviality Problem is a special case of the Braid Isotopy Problem, so each solution to the latter automatically gives a solution to the former. On the other hand, one can easily check that, if <i><b>D</b></i> and <i><b>D'</b></i> are <i><b>n</b></i> strand braid diagrams, then <i><b>D</b></i> and <i><b>D'</b></i> are isotopic if and only if the braid diagram <i><b>D''</b></i> obtained by stacking the image of <i><b>D</b></i> in a horizontal mirror over <i><b>D</b></i> is trivial. Thus, any solution to the Braid Triviality Problem leads to a solution to the Braid Isotopy Problem.
+
+<hr>
+
+<font color="blue"><b><li>What is Handle Reduction?</b></font>
+
+<p>
+
+Handle Reduction is one of the many ways to solve the Braid Triviality Problem, i.e., to decide whether the braid diagram encoded by a given braid word can be deformed into a diagram with no crossing. Owing to the above remark, Handle Reduction also provides a solution to the Braid Isotopy Problem.
+
+
+Handle Reduction turns out to be extremely efficient in practice: when properly implemented, it enables one to compare diagrams involving thousands of crossings in less than one second.
+
+<hr>
+
+<font color="blue"><b><li>What is a handle?</b></font>
+
+<p>
+
+A handle is a braid word of a special type. For <b>s</b> be any lower case letter (thus one of <b>a</b>, <b>b</b>, ...), let us define a <font color="red"><b>s</b>-handle</font> to be a braid word of the form <b>s...S</b>, where <b>S</b> is the upper case letter associated with <b>s</b> and all intermediate letters between <b>s</b> and <b>S</b> are letters lying before <b>s</b> in alphabetical order. Symmetrically, for <b>S</b> an upper case letter, a <font color="red"><b>S</b>-handle</font> is defined to be a braid word of the form <b>S...s</b>, where <b>s</b> is the lower case letter associated with <b>S</b> and all intermediate letters are before <b>s</b> in alphabetical order. Geometrically, a handle encodes a diagram in which the first and the last crossings have opposite orientations, and all intermediate crossings (if any) are located on the left of the first and the last crossings. For instance, the word <b>cbAC</b> is a <b>c</b>-handle, corresponding to the diagram
+
+<br>
+
+<center><img align="center" src="Images/braid2.png" height="250" width="220"></center>
+
+<br>
+
+in which we recognize the characteristic shape of a handle (drawn in black).
+
+<br>
+
+We say that a braid word <b>w</b> contains a handle if some subword of <b>w</b> is a <b>s</b>- or a <b>S</b>-handle. For instance, the braid word <b>AB<font color="red">cbAC</font>b<font color="green">Aa</font>b</b> contains the <b>c</b>-handle <b>cbAC</b>, and the <b>A</b>-handle <b>Aa</b>. If a braid word <i><b>w</b></i> contains at least one handle, the leftmost subword of <i><b>w</b></i> that is a handle is called the <font color="red">first handle</font> in <i><b>w</b></i>: we read <i><b>w</b></i> starting from the left, and the first handle is the one we first encounter.
+
+
+<hr>
+
+<font color="blue"><b><li>What does reducing a handle mean?</b></font>
+
+<p>
+The principle of Handle Reduction is to try to get rid of handles. The basic step is an operation that transforms a handle into an equivalent word, called its reduct.
+<br>
+Assume that <i><b>h</b></i> is a <b>s</b>-handle. The <font color="red">reduct</font> of <i><b>h</b></i> to be the braid word obtained from <i><b>h</b></i> by deleting the initial letter <b>s</b> and the final letter <b>S</b>, and, denoting by <b>r</b> the letter that lies immediately before <b>s</b> in alphabetical order and by <b>R</b> the associated upper case letter, by replacing every <b>r</b> in <i><b>h</b></i> (if any) with <b>Rsr</b> and every <b>R</b> in <i><b>h</b></i> (if any) with <b>RSr</b>. Symmetrically, if <i><b>h</b></i> is a <b>S</b>-handle, we define the reduct of <i><b>h</b></i> to be obtained from <i><b>h</b></i> by deleting the initial <b>S</b> and the final <b>s</b>, and replacing every <b>r</b> in <i><b>h</b></i> with <b>rsR</b> and every <b>R</b> in <i><b>h</b></i> with <b>rSR</b>, where <b>r</b> and <b>R</b> still denote the letters just before <b>s</b> in alphabetical order. 
+
+<br>
+
+For instance, the reduct of the <b>c</b>-handle <b>cbAC</b> is <b>BcbA</b>, while the reduct of the <b>A</b>-handle <b>Aa</b> is the empty word.
+
+<br>
+
+Geometrically, the diagram encoded by the reduct of <i><b>h</b></i> is obtained from the diagram encoded by <i><b>h</b></i> by pushing to the left the strand that makes the handle, so that it skirts on the left of all neighbouring crossings. 
+
+<p>
+
+<center><img align="center" src="Images/braid3.png" height="250" width="220"></center>
+
+<br>
+
+The above picture shows that handle reduction is an equivalence, i.e., the associated diagrams are isotopic. We also see that, by reducing a handle, we get rid of it, but at the expense of possibly creating new handles on the left or on the right of the handle that has been deleted.
+
+
+<hr>
+
+<font color="blue"><b><li>How does the Handle Reduction algorithm work?</b></font>
+
+<p>
+
+One starts with an arbitrary braid word <i><b>w</b></i>, one looks at the first handle in <i><b>w</b></i>, we reduce it, i.e., we replace the handle by its reduct, and we repeat the process with the new word so obtained until no more handle exists. Then we conclude as follows:
+<menu>
+<li> If, after getting rid of all handles, we are left with the empty word, then the initial word <i><b>w</b></i> is equivalent to the empty word;
+<li> If, after getting rid of all handles, we are left with a nonempty word, then the initial word <i><b>w</b></i> is not equivalent to the empty word.
+</menu>
+Thus we have got a solution to the Braid Triviality Problem.
+
+<hr>
+
+<font color="blue"><b><li>Why does Handle Reduction work?</b></font>
+
+<p>
+
+This is the hard point. A priori, it might very well happen that we continue reducing handles for ever, or that a word containing no handle be equivalent to the empty word. Actually, this never happens, so the Handle Reduction algorithm always converges and solves the Braid Triviality Problem. But this is a rather difficult result whose only proof known so far requires sophisticated mathematical methods. The main reason behind the correctness of the Handle Reduction algorithm is the existence of a certain braid ordering. For more details and explanations, see
+<br>
+
+<menu>
+
+<li> P.Dehornoy, I.Dynnikov, D.Rolfsen, B.Wiest, Why are braids orderable?, Panoramas et Synth&egrave;ses vol. 14, Soc. Math. France (2002).</li>
+<li> C.Kassel & V.Turaev, Braid groups, Springer (2007).</li>
+</menu>
+
+<hr>
+
+</body>

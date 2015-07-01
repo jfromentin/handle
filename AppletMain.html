@@ -1,0 +1,112 @@
+<html><head>
+<title>Braid applet, main page</title>   
+<script language="javascript"> </script> 
+</head>
+
+<body style="background-color: rgb(220, 220, 220);"> 
+
+<hr size=10>
+
+<table width=100%>
+<tbody> <tr><td>
+<center>
+<h1>A braid applet
+<font size=2>version 1.0 (June 2007)</font></h1>
+<h4>by 
+<a href="http://www.math.unicaen.fr/~dehornoy">Patrick Dehornoy</a>
+(conception, text) and
+<a href="http://www.math.unicaen.fr/~jfroment">Jean Fromentin</a>
+(realization, implementation)
+</h4></center>
+</td></tr></table>
+
+<hr size=10>
+
+<table>
+<tbody>
+<tr>
+<td style="text-align: justify">
+<b>What does this applet?</b>
+
+It allows you to draw braid diagrams, and to perform a few basic operations, namely recognizing if a braid diagram is really braided, or, more generally, if a braid diagram can be continuously deformed into another one. The program grew out from an applet by 
+<a href="http://math.ucsb.edu/~bigelow/">Stephen Bigelow</a>. 
+We intend to gradually enrich it with more braid operations.
+</td>
+</tr></table>
+
+<hr size=10>
+
+<table>
+<tr>
+<td width="480">
+<applet code="HandleReduction.class" height="640" width="480">
+</applet>
+</td>     
+
+<td style="text-align: justify;">
+<b>How to use the applet?</b>
+
+Click on the buttons at the bottom of the window; at the moment, three procedures are implemented -- click on colored words to obtain explanation about technical terms.
+
+<br>
+
+<ul>
+
+<li>
+
+<font color="red">Draw</font>: You enter a braid word, i.e., any word in the letters 'a', 'A', 'b', 'B', ..., 'z', 'Z', and the program draws the braid diagram <a href="AppletInfo.html">encoded by</a> that word.
+<p>
+
+<li>
+
+<font color="red">Reduce</font>: You enter a braid word as above, the program draws the corresponding braid diagram, but, then, it dynamically transforms it so as to obtain a simpler diagram, for instance a diagram with no crossing if this is possible; in other words, the program decides if the initial diagram is really braided, i.e., it solves the <a href="AppletInfo.html">Braid Triviality Problem</a>; the method used to transform the diagram is <a href="AppletInfo.html">handle reduction</a>, one of the many ways to recognize trivial braid diagrams. 
+<p>
+
+<li>
+
+<font color="red">Compare</font>: You enter two braid words, the program draws the corresponding braid diagrams <i><b>D, D'</b></i> and, then, it decides if one can deform <i><b>D</b></i> into <i><b>D'</b></i> continuously, i.e., it solves the <a href="AppletInfo.html">Braid Isotopy Problem</a>; the method consists in building a new diagram
+<i><b>D''</b></i> by stacking the mirror image of <i><b>D</b></i> over <i><b>D'</b></i> and then  applying <a href="AppletInfo.html">handle reduction</a> to <i><b>D''</b></i>.
+
+<p>
+
+<li>
+
+<font color="red">Controls</font> enables you to change the parameters of animations:
+<ul>
+<li><font color="red">Speed</font> adjusts the speed of diagram deformations (it mostly depends on the machine on which the applet runs);
+
+<li><font color="red">Mode</font> selects between <font color="red">Continuous</font> (deformations occur automatically) and <font color="red">Step-by-step</font> (deformations occur when you click on the <font color="red">Reduce</font> button).
+
+</ul>
+</ul>
+</td>
+
+</tr>
+</tbody> 
+</table>
+
+
+<hr size=10>
+
+<table width=100%>
+<tr>
+<td>
+
+Total number of visitors : <script type="text/javascript" src="http://www.ovnet.net/cpt/?code=4/49/7199/0/1&ID=414700898"></script>
+
+&nbsp;&nbsp;&nbsp;
+
+Number of visitors currently online: 
+<script type="text/javascript" src="http://www.ovnet.net/live/?code=0/100/7199/8/1&ID=414700899"></script>
+
+</td>
+
+<td align=right>
+
+<A href="mailto:dehornoy@math.unicaen.fr,jean.fromentin@math.unicaen.fr">Send a question or a comment</A>
+
+</td>
+</tr>
+</table>
+
+</body></html>
