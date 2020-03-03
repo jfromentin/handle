@@ -2,7 +2,7 @@ import java.awt.Color;
 import javax.swing.JFrame;
 
 
-public class HandleReductionMain{
+public class HandleReduction{
     public static void main(String args[]) {
 	JFrame  handleFrame= new JFrame(); 
 	handleFrame.setTitle("Handle reduction");

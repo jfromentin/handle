@@ -1,14 +1,10 @@
-Their is two way to compile and use the handle reduction program : 
+The light directory contains a "light" version
 
-1) As an applet : 
+To compile :
 
-  javac HandleReductionApplet.java
+  javac HandleRedution.java
 
-  open handleApplet.html in a web-browser
+To run :
 
-2) An an application : 
-
-  javac HandleRedutionMain.java
-
-  java HandleReductionMain
+  java HandleReduction
 
